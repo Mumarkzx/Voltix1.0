@@ -2,7 +2,7 @@ import logoVoltix from '../assets/logo Voltix2.jpeg';
 
 export function Header() {
     return (
-        <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/85 backdrop-blur-md">
+        <header className="sticky top-0 z-40 border-b border-emerald-950/80 bg-[#050807]/90 backdrop-blur-md">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
                 <a href="#top" className="flex-shrink-0 flex items-center cursor-pointer" aria-label="Voltyx home">
                     <img
@@ -13,13 +13,13 @@ export function Header() {
                 </a>
 
                 <nav className="hidden md:flex items-center gap-8">
-                    <a href="#catalogo" className="text-sm font-medium text-slate-600 transition hover:text-emerald-600">
+                    <a href="#catalogo" className="text-sm font-medium text-slate-300 transition hover:text-emerald-300">
                         Catálogo
                     </a>
-                    <a href="#sobre" className="text-sm font-medium text-slate-600 transition hover:text-emerald-600">
+                    <a href="#sobre" className="text-sm font-medium text-slate-300 transition hover:text-emerald-300">
                         Sobre nós
                     </a>
-                    <a href="#contato" className="text-sm font-medium text-slate-600 transition hover:text-emerald-600">
+                    <a href="#contato" className="text-sm font-medium text-slate-300 transition hover:text-emerald-300">
                         Contato
                     </a>
                 </nav>
@@ -34,7 +34,7 @@ export function Header() {
                 </div>
 
                 <div className="md:hidden flex items-center">
-                    <button className="text-slate-600 hover:text-slate-900 focus:outline-none" aria-label="Abrir menu">
+                    <button className="text-slate-300 hover:text-emerald-300 focus:outline-none" aria-label="Abrir menu">
                         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
