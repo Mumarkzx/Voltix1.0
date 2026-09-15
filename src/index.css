@@ -21,6 +21,7 @@ body {
     min-width: 320px;
     min-height: 100vh;
     background: #050807;
+    color: #ecfdf5;
 }
 
 * {
@@ -38,4 +39,9 @@ button {
 img {
     max-width: 100%;
     display: block;
+}
+
+::selection {
+    background: rgba(16, 185, 129, 0.4);
+    color: white;
 }

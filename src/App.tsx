@@ -11,6 +11,42 @@ const motosDestaque = catalogoMotos.filter((moto) =>
     ['tank', 'z3', 'm5-pro'].includes(moto.id)
 );
 
+const beneficios = [
+    {
+        icone: '⚡',
+        titulo: 'Potência instantânea',
+        texto: 'Aceleração ágil e resposta imediata para o seu dia a dia sem perder conforto.'
+    },
+    {
+        icone: '🔋',
+        titulo: 'Autonomia com inteligência',
+        texto: 'Baterias pensadas para trechos urbanos e deslocamentos mais longos com eficiência real.'
+    },
+    {
+        icone: '🌱',
+        titulo: 'Mobilidade consciente',
+        texto: 'Menos ruído, menos emissões e mais liberdade para se locomover de forma inteligente.'
+    }
+];
+
+const perfis = [
+    {
+        titulo: 'Para quem vive na cidade',
+        destaque: 'Praticidade no trânsito',
+        texto: 'Modelos leves, ágeis e ideais para trajetos curtos, deslocamentos diários e estacionamento fácil.'
+    },
+    {
+        titulo: 'Para quem trabalha e se desloca muito',
+        destaque: 'Mais autonomia no bolso',
+        texto: 'Escolha uma Voltyx com melhor aproveitamento de bateria, conforto e eficiência para o uso constante.'
+    },
+    {
+        titulo: 'Para quem quer conforto e estilo',
+        destaque: 'Tecnologia com presença',
+        texto: 'Design moderno, recursos de conforto e uma experiência premium para quem quer se destacar na rua.'
+    }
+];
+
 function App() {
     const [motoSelecionada, setMotoSelecionada] = useState<Moto | null>(null);
     const [destaqueAtual, setDestaqueAtual] = useState(0);
@@ -25,7 +61,7 @@ function App() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-[#050807] text-slate-100 flex flex-col">
+        <div id="top" className="min-h-screen bg-[#050807] text-slate-100 flex flex-col">
             <Header />
 
             <main className="flex-grow">
@@ -36,33 +72,33 @@ function App() {
                         <div className="max-w-2xl">
                             <p className="text-sm font-bold uppercase tracking-[0.25em] text-emerald-300">Voltyx mobilidade elétrica</p>
                             <h1 className="mt-5 max-w-xl text-5xl font-black leading-[1.02] tracking-tight sm:text-6xl">
-                                Mais liberdade para todos os caminhos.
+                                A liberdade de ir e vir com mais praticidade.
                             </h1>
                             <p className="mt-6 max-w-lg text-lg leading-8 text-slate-300">
-                                Encontre a scooter elétrica ideal para sua rotina, com economia, conforto e tecnologia para chegar mais longe.
+                                Descubra scooters elétricas pensadas para a rotina urbana, com autonomia, conforto e tecnologia que fazem cada deslocamento ser mais simples e mais inteligente.
                             </p>
 
                             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                                 <a href="#catalogo" className="inline-flex items-center justify-center rounded-xl bg-emerald-400 px-6 py-3.5 font-bold text-slate-950 shadow-lg shadow-emerald-500/20 transition hover:bg-emerald-300">
-                                    Explorar catálogo
+                                    Ver modelos
                                 </a>
                                 <a href="#contato" className="inline-flex items-center justify-center rounded-xl border border-white/20 px-6 py-3.5 font-bold text-white transition hover:border-emerald-300 hover:text-emerald-200">
-                                    Falar com consultor
+                                    Solicitar orçamento
                                 </a>
                             </div>
 
                             <div className="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-white/15 pt-6">
                                 <div>
                                     <p className="text-3xl font-black">14</p>
-                                    <p className="mt-1 text-sm text-slate-400">modelos disponíveis</p>
+                                    <p className="mt-1 text-sm text-slate-400">modelos</p>
                                 </div>
                                 <div>
                                     <p className="text-3xl font-black">80 km</p>
-                                    <p className="mt-1 text-sm text-slate-400">autonomia máxima</p>
+                                    <p className="mt-1 text-sm text-slate-400">autonomia</p>
                                 </div>
                                 <div>
                                     <p className="text-3xl font-black text-emerald-300">0</p>
-                                    <p className="mt-1 text-sm text-slate-400">emissões diretas</p>
+                                    <p className="mt-1 text-sm text-slate-400">emissões</p>
                                 </div>
                             </div>
                         </div>
@@ -100,22 +136,38 @@ function App() {
 
                 <section id="sobre" className="bg-[#0a0f0c] py-20">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="mb-10 max-w-3xl">
+                            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">Por que escolher Voltyx</p>
+                            <h2 className="mt-3 text-3xl font-black text-white md:text-4xl">Mobilidade elétrica com mais conforto, autonomia e praticidade.</h2>
+                        </div>
+
                         <div className="grid gap-8 md:grid-cols-3">
-                            <div className="rounded-2xl border border-emerald-900/60 bg-[#101812] p-6 shadow-lg shadow-black/20">
-                                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-400/15 text-2xl">⚡</div>
-                                <h3 className="text-xl font-bold text-white">Potência instantânea</h3>
-                                <p className="mt-2 text-slate-400">Torque imediato com resposta ágil em qualquer trajeto urbano ou de longa distância.</p>
-                            </div>
-                            <div className="rounded-2xl border border-emerald-900/60 bg-[#101812] p-6 shadow-lg shadow-black/20">
-                                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-400/15 text-2xl">🔋</div>
-                                <h3 className="text-xl font-bold text-white">Baterias inteligentes</h3>
-                                <p className="mt-2 text-slate-400">Tecnologia pensada para máxima autonomia, eficiência e vida útil da bateria.</p>
-                            </div>
-                            <div className="rounded-2xl border border-emerald-900/60 bg-[#101812] p-6 shadow-lg shadow-black/20">
-                                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-400/15 text-2xl">🌱</div>
-                                <h3 className="text-xl font-bold text-white">Mobilidade sustentável</h3>
-                                <p className="mt-2 text-slate-400">Menos emissões, menos ruído e mais liberdade para circular com consciência.</p>
-                            </div>
+                            {beneficios.map((beneficio) => (
+                                <div key={beneficio.titulo} className="rounded-2xl border border-emerald-900/60 bg-[#101812] p-6 shadow-lg shadow-black/20">
+                                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-400/15 text-2xl">{beneficio.icone}</div>
+                                    <h3 className="text-xl font-bold text-white">{beneficio.titulo}</h3>
+                                    <p className="mt-2 text-slate-400">{beneficio.texto}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                <section className="bg-[#050807] py-20">
+                    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                        <div className="mb-10 max-w-3xl">
+                            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">Escolha por perfil</p>
+                            <h2 className="mt-3 text-3xl font-black text-white md:text-4xl">A Voltyx certa para o seu estilo de vida.</h2>
+                        </div>
+
+                        <div className="grid gap-6 lg:grid-cols-3">
+                            {perfis.map((perfil) => (
+                                <div key={perfil.titulo} className="rounded-3xl border border-emerald-900/60 bg-[#101812] p-6">
+                                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-300">{perfil.destaque}</p>
+                                    <h3 className="mt-4 text-2xl font-black text-white">{perfil.titulo}</h3>
+                                    <p className="mt-3 text-slate-400">{perfil.texto}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </section>

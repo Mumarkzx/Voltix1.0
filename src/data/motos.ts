@@ -101,7 +101,7 @@ export const catalogoMotos: Moto[] = [
         descricao: 'Triciclo elétrico confortável, estável e ideal para o uso diário.',
         preco: null,
         autonomiaKm: null,
-        velocidadeMaxKmH: 3,
+        velocidadeMaxKmH: 30,
         tempoRecargaHoras: null,
         imagemUrl: s3Image
     },
